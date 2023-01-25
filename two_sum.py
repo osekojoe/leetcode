@@ -18,6 +18,16 @@ class Solution(object):
 				if nums[j] == target - nums[i]:
 					return [i, j]
 
+	def hash_twoSum(self, nums, target):
+		"""more efficient solution with hash table"""
+		hashmap = {}
+		for i in range(len(nums)):
+			hashmap[nums[i]] = i
+		for i in range(len(nums)):
+			j = target - nums[i]
+			if (j in hashmap) and hashmap[j] != i:
+				return [i, hashmap[j]]
+
 nums = [2,7,11,15]
 target = 9
 
