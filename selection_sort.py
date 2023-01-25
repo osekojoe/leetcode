@@ -2,7 +2,7 @@
 class Solution(object):
 	def selection_sort(self, arr):
 		for i in range(len(arr)):
-			min_idx = i
+			min_idx = i #initialize minimum element
 			for j in range(i + 1, len(arr)):
 				if arr[min_idx] > arr[j]:
 					min_idx = j
